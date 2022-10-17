@@ -32,13 +32,18 @@
     <form action="/login/auth" method="post">
 
     <label>E-mail:</label>
-    <input name="email" type="text" placeholder="adm@etec.com" />
+    <input name="email" type="text" placeholder="adm@etec.com"/>
     <br>
     <label>Senha:</label>
     <input name="senha" type="password" placeholder="123" />
     <br>
+    <?php if(isset($_GET['erro']))
+    {
+        echo '<span style="color:#CA2400;"> E-mail ou senha estão incorretos </span>';
+    }
+    ?>
     <br>
-    <button type="submit">Entrar</button>
+    <button type="submit">Entrar</button>    
     </form>   
     </center> 
 </body>
