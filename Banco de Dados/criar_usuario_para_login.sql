@@ -1,0 +1,1 @@
+INSERT INTO usuario(nome, email, senha) VALUES ('adm', 'adm@etec.com', sha1(123));

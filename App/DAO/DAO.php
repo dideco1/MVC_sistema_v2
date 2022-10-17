@@ -8,7 +8,7 @@ abstract class DAO
 
     public function __construct()
     {        
-        $dsn = "mysql:host=localhost:3306;dbname=db_sistema";        
+        $dsn = "mysql:host=localhost:3307;dbname=db_sistema";        
         $this->conexao = new PDO($dsn, 'usuario', '1234');
     }
 }

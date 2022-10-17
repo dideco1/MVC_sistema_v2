@@ -52,7 +52,7 @@ class CategoriaProdutoDAO extends DAO
         $stmt->bindValue(1, $id);
         $stmt->execute();
 
-        return $stmt->fetchObject("CategoriaProdutoModel");
+        return $stmt->fetchObject("");
     }
 
     public function delete(int $id)
