@@ -32,10 +32,10 @@
     <form action="/login/auth" method="post">
 
     <label>E-mail:</label>
-    <input name="email" type="text" placeholder="adm@etec.com"/>
+    <input name="email" type="text" placeholder="adm@etec.com" required/>
     <br>
     <label>Senha:</label>
-    <input name="senha" type="password" placeholder="123" />
+    <input name="senha" type="password" placeholder="123" required/>
     <br>
     <?php if(isset($_GET['erro']))
     {
@@ -43,7 +43,7 @@
     }
     ?>
     <br>
-    <button type="submit">Entrar</button>    
+    <button type="submit">Entrar</button>
     </form>   
     </center> 
 </body>
