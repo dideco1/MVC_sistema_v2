@@ -48,6 +48,6 @@ class CadastroController extends Controller
         $model = new CadastroModel();
         $model->delete( (int) $_GET['id']);
 
-        header("Location: /login");
+        header("Location: /cadastro/lista");
     }
 }

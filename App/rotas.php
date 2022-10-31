@@ -122,6 +122,6 @@ switch($uri_parse)
  
 
     default:
-        include 'login.php';
+        LoginController::index();
     break;
 }

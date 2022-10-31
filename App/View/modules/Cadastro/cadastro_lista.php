@@ -56,7 +56,7 @@
             <tr>
                 <td> <a href="/cadastro/delete?id=<?= $item['id'] ?>">X</a> </td>
                 <td><?= $item['id'] ?></td>
-                <td>&nbsp<a href="/cadastro/form?id=<?= $item['id'] ?>"> <?= $item['nome'] ?> </a>&nbsp</td>
+                <td>&nbsp<a href="/cadastro?id=<?= $item['id'] ?>"> <?= $item['nome'] ?> </a>&nbsp</td>
                 <td>&nbsp<?= $item['email'] ?>&nbsp</td>
                 <td>&nbsp<?= $item['senha'] ?>&nbsp</td>
 

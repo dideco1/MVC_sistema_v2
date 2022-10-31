@@ -31,11 +31,12 @@
     <h1> Cadastro </h1>
     <form action="/cadastro/save" method="post">
 
+    <input type="hidden" value="<?= $model->id ?>" name="id" />
     <label>Nome:</label>
-    <input name="nome" type="text" placeholder="adm da silva" required/>
+    <input name="nome" type="text" value="<?= $model->nome ?>" placeholder="adm da silva" required/>
     <br>
     <label>E-mail:</label>
-    <input name="email" type="text" placeholder="adm@etec.com" required/>
+    <input name="email" type="text" value="<?= $model->email ?>" placeholder="adm@etec.com" required/>
     <br>
     <label>Senha:</label>
     <input name="senha" type="password" placeholder="123" required/>
@@ -46,7 +47,7 @@
     }
     ?>
     <br>
-    <button type="submit">Entrar</button>  
+    <button type="submit">Cadastrar</button>  
     </form>    
     <a href="/login">Login</a>
     <br>
