@@ -98,6 +98,9 @@ switch($uri_parse)
  
 
     default:
-        include 'menu.php';
+        if(!isset($_SESSION['usuario_logado']))
+            include LoginController::index();
+        else
+            include 'menu.php';
     break;
 }
