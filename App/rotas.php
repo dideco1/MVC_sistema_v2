@@ -5,13 +5,19 @@ use App\Controller\{
     ProdutoController,
     CategoriaProdutoController,
     FuncionarioController,
-    LoginController
+    LoginController,
+    CadastroController
 };
 
 $uri_parse = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 switch($uri_parse)
 {
+    # Rota Menu
+    case '/menu':
+        include 'menu.php';
+    break;
+    
     # Rotas Login
     case '/login':
         LoginController::index();
@@ -93,14 +99,29 @@ switch($uri_parse)
     case '/funcionario/delete':
         FuncionarioController::delete();
     break;  
-      
+
+    # Rotas Cadastro
+
+    case '/cadastro':
+        CadastroController::form();        
+    break;
+
+    case '/cadastro/save':
+        CadastroController::save();
+    break;
+
+    case '/cadastro/lista':
+        CadastroController::lista();
+    break;
+
+    case '/cadastro/delete':
+        CadastroController::delete();
+    break;
+        
     
  
 
     default:
-        if(!isset($_SESSION['usuario_logado']))
-            include LoginController::index();
-        else
-            include 'menu.php';
+        include 'login.php';
     break;
 }
